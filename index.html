@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101311" />
+  <title>Virtual Art Workshop — Виртуалды шеберхана</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Басты бет"><span class="brand-mark">V<span>✳</span></span><span><b>VIRTUAL ART</b><small>WORKSHOP · ОҚУ ЗЕРТХАНАСЫ</small></span></a>
+      <div class="side-caption">ЖҰМЫС ОРНЫ</div>
+      <nav class="main-nav" aria-label="Негізгі навигация">
+        <button class="nav-item active" data-lab="carve"><span class="nav-icon">⌁</span><span>Ағашты ою</span><span class="nav-key">01</span></button>
+        <button class="nav-item" data-lab="burn"><span class="nav-icon">♨</span><span>Күйдіру өнері</span><span class="nav-key">02</span></button>
+        <button class="nav-item" data-lab="lathe"><span class="nav-icon">◉</span><span>Ағашты жону</span><span class="nav-key">03</span></button>
+      </nav>
+      <div class="side-caption side-caption-lower">ЗЕРТХАНА</div>
+      <div class="nav-locked"><span>▦</span><span>Материалды тегістеу</span><i>ЖОСПАРДА</i></div>
+      <div class="nav-locked"><span>▤</span><span>Бөлшек құрастыру</span><i>ЖОСПАРДА</i></div>
+      <div class="nav-locked"><span>◈</span><span>Бояу және әрлеу</span><i>ЖОСПАРДА</i></div>
+      <div class="sidebar-bottom"><div class="safety-mini"><span class="safety-check">✓</span><span><b>Қауіпсіз орта</b><small>Тек виртуалды тәжірибе</small></span></div><div class="profile"><div class="avatar">Н</div><span><b>Нұржан</b><small>ОҚУШЫ · 7-СЫНЫП</small></span><span class="more">···</span></div></div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar"><div class="crumb"><span>ШЕБЕРХАНА</span><b>/</b><strong id="crumbName">АҒАШТЫ ОЮ</strong></div><div class="top-actions"><div class="save-state"><span></span><span id="saveLabel">Жұмыс сақталды</span></div><button class="button button-quiet" id="resetBtn"><span>↺</span> Қалпына келтіру</button><button class="button button-quiet" id="saveBtn"><span>↓</span> Жұмысты сақтау</button></div></header>
+
+      <section class="intro-row"><div><div class="eyebrow"><span class="live-dot"></span> ВИРТУАЛДЫ ӨНДІРІСТІК ЗЕРТХАНА <span class="eyebrow-divider">/</span> <span id="stepLabel">01 · 03</span></div><h1 id="title">Ағашқа <em>ою салу</em></h1><p id="subtitle">Өрнекті таңда да, қашауды жүргізіп, ағаш бетіне ойық түсір.</p></div><button class="help-button" id="helpBtn"><span>?</span> Қалай жұмыс істейді</button></section>
+
+      <section class="studio-grid">
+        <div class="viewport-card">
+          <div class="viewport-head"><div class="view-label"><span class="view-live"></span><span id="viewMode">ҮШ ӨЛШЕМДІ ЖҰМЫС АЙМАҒЫ</span></div><div class="viewport-actions"><button class="icon-button" id="viewBtn" title="Көріністі ауыстыру">⌗</button><button class="icon-button" id="fullscreenBtn" title="Толық экран">⛶</button></div></div>
+          <div id="canvasHost" class="canvas-host"><div class="loading"><span></span> 3D шеберхана жүктелуде</div><div class="orientation"><span>Y</span><span>X</span><span>Z</span></div><div class="zoom-controls"><button id="zoomIn" aria-label="Жақындату">＋</button><button id="zoomOut" aria-label="Алыстату">−</button></div><div class="canvas-tip" id="canvasTip">Бетті өңдеу үшін ағашқа басып, сүйреңіз</div><div class="stage-tag"><span class="stage-dot"></span><span id="stageText">АҚШЕН · ҚАШАУ</span></div></div>
+          <div class="viewport-foot"><span><kbd>Сүйреу</kbd> көріністі бұру <i></i> <kbd>Дөңгелек</kbd> жақындату</span><span id="dimensionLabel">240 × 160 × 24 мм</span></div>
+        </div>
+
+        <aside class="control-panel"><div class="panel-heading"><span>ЖҰМЫС ПАРАМЕТРЛЕРІ</span><button class="dots">···</button></div>
+          <div class="panel-section" id="patternSection"><div class="section-title"><span>01</span><b id="pickLabel">ОЮ ҮЛГІСІ</b><button class="text-link" id="customPattern">ӨЗ ӨРНЕГІМ</button></div><div class="pattern-grid"><button class="pattern active" data-pattern="qoshkar"><span class="pattern-art">❧</span><small>Қошқармүйіз</small></button><button class="pattern" data-pattern="tuyetaban"><span class="pattern-art">✣</span><small>Түйетабан</small></button><button class="pattern" data-pattern="kuskanat"><span class="pattern-art">⌁</span><small>Құсқанаты</small></button><button class="pattern" data-pattern="geo"><span class="pattern-art">⌗</span><small>Геометрия</small></button><button class="pattern" data-form="vase"><span class="pattern-art">♙</span><small>Ваза</small></button><button class="pattern" data-form="chess"><span class="pattern-art">♟</span><small>Шахмат</small></button><button class="pattern" data-form="column"><span class="pattern-art">▥</span><small>Бағана</small></button><button class="pattern" data-form="cup"><span class="pattern-art">◡</span><small>Тостаған</small></button></div></div>
+          <div class="panel-section" id="toolSection"><div class="section-title"><span>02</span><b>ҚҰРАЛ ЖӘНЕ ТЕРЕҢДІК</b></div><div class="tool-select"><span class="tool-glyph">⌁</span><span><b id="toolName">Жалпақ қашау</b><small>Жіңішке ұш · 6 мм</small></span><span class="chevron">⌄</span></div><label class="range-label"><span>Ою тереңдігі</span><b id="depthValue">45%</b></label><input type="range" id="depthRange" min="15" max="100" value="45" /></div>
+          <div class="panel-section material-section"><div class="section-title"><span>03</span><b>МАТЕРИАЛ</b></div><label class="select-wrap"><span class="wood-swatch"></span><select id="woodSelect"><option value="oak">Емен · ашық қоңыр</option><option value="walnut">Жаңғақ · қою қоңыр</option><option value="pine">Қарағай · бал реңкі</option></select><span>⌄</span></label><label class="range-label size-label"><span>Дайындама өлшемі</span><b id="sizeValue">Орташа</b></label><div class="segmented"><button data-size="small">Кіші</button><button class="selected" data-size="medium">Орташа</button><button data-size="large">Үлкен</button></div></div>
+          <div class="panel-bottom"><div class="safe-note"><span>✳</span><span><b>Қауіпсіз виртуалды режим</b><small>Барлық әрекет сандық ортада орындалады.</small></span></div><button class="button button-dark" id="actionBtn"><span>⌁</span><span id="actionLabel">Тапсырманы орындау</span><b>↗</b></button></div>
+        </aside>
+      </section>
+
+      <section class="bottom-grid"><article class="task-card"><div class="card-kicker">БҮГІНГІ ТАПСЫРМА <span>БАСТАПҚЫ ДЕҢГЕЙ</span></div><div class="task-content"><div><h2 id="taskTitle">Ағашқа қошқармүйіз оюын түсір</h2><p id="taskDescription">Өрнекті дайындама ортасына орналастырып, бедерін біркелкі ой.</p></div><button class="round-arrow" id="taskBtn">↗</button></div><div class="task-progress"><div><span>Тапсырма барысы</span><b class="progress-state"><span class="process-spinner" id="progressSpinner" hidden></span><span id="progressText">Бастауға дайын</span></b></div><div class="progress-track"><span id="progressBar"></span></div></div></article>
+        <article class="stats-card"><div class="stats-head"><span>ЖҰМЫС ҮЛГІСІ</span><button class="text-link" id="compareBtn">АЛДЫН / КЕЙІН <span>↗</span></button></div><div class="stats-main"><div class="stat-number"><strong id="workCount">0</strong><small>әрекет</small></div><div class="stat-sep"></div><div class="stat-number"><strong id="qualityValue">—</strong><small>бедер тереңдігі</small></div><div class="mini-preview" id="miniPreview"><span>3D</span></div></div><div class="stats-footer"><span class="pulse"></span><span id="statusText">Жұмыс аймағы дайын</span><span class="mono" id="savedAt">SESSION 01</span></div></article></section>
+      <footer class="page-footer"><span>VIRTUAL ART WORKSHOP <i>·</i> КӨРКЕМ ЕҢБЕКТІҢ ВИРТУАЛДЫ ЗЕРТХАНАСЫ</span><span>ҚАУІПСІЗ ОРТА <b>✓</b></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="helpDialog"><button class="dialog-close" id="closeHelp">×</button><div class="dialog-kicker">ЖҰМЫС НҰСҚАУЛЫҒЫ</div><h2 id="helpTitle">Ағашқа ою салу</h2><p id="helpText">Өрнек түрін таңда. Қашаумен ағаш бетінің үстінен басып, сүйре: құрал өткен жерде геометриялық ойық пайда болады. Тереңдігін бүйір панельден ретте. Көріністі бұру үшін бос аймақты сүйре немесе тінтуір дөңгелегін қолдан.</p><div class="dialog-safe">✳ Бұл — тек виртуалды, қауіпсіз оқу симуляциясы.</div><button class="button button-primary" id="gotIt">Түсінікті</button></dialog>
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
